@@ -15,7 +15,7 @@ const httpOptions = {
 @Injectable()
 export class DashboardService {
     constructor(private http: HttpClient, private messageService: MessageService) { }
-    private _dashboardUrl = 'http://localhost:3000/dashboards/';
+    private _dashboardUrl = 'https://geckot-api.herokuapp.com/dashboards/';
 
     getDashboards(): Observable<Dashboard[]> {
         return this.http.get<Dashboard[]>(this._dashboardUrl)
