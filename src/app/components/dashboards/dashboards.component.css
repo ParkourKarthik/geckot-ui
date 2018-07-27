@@ -1,0 +1,16 @@
+.cards-section {
+    padding: 5px 0px 5px 0px;
+    clear: both;
+}
+
+.mat-card {
+    margin: 10px;
+}
+
+.add-button {
+    float: right;
+}
+
+.dashboard-submit {
+    float: right;
+}
