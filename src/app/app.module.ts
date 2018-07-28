@@ -4,6 +4,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './components/app/app.component';
 import { DashboardsComponent, DashboardComponent } from './components/dashboards/dashboards.component';
+import { MessagesComponent } from './components/messages/messages.component';
 import { DashboardService } from './services/dashboard.service';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatSidenavModule } from '@angular/material/sidenav';
@@ -43,7 +44,8 @@ import { MessageService } from './services/message.service';
     declarations: [
         AppComponent,
         DashboardsComponent,
-        DashboardComponent
+        DashboardComponent,
+        MessagesComponent
     ],
     entryComponents: [
         DashboardComponent
