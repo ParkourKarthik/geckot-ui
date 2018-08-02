@@ -23,7 +23,7 @@ stages:
   - production
 
 build:
-  stage:build
+  stage: build
   script:
   - npm install
   - npm run-script build
