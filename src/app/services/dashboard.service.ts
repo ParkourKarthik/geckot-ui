@@ -1,10 +1,9 @@
 import { Injectable } from '@angular/core';
 import { Dashboard, objResponse } from '../models/dashboard.model';
 import { HttpClient, HttpHeaders, HttpParams } from '@angular/common/http';
-import 'rxjs/Rx';
-import { Observable } from 'rxjs/Observable';
+// import 'rxjs/Rx';
+import { Observable ,  of } from 'rxjs';
 import { catchError, map, tap } from 'rxjs/operators';
-import { of } from 'rxjs/observable/of';
 import { MessageService } from './message.service';
 
 const httpOptions = {
