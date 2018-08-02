@@ -22,7 +22,7 @@ stages:
 #  - test
   - production
 
-:build
+build:
   stage:build
   script:
   - npm install
