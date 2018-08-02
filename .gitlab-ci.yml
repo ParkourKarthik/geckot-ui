@@ -18,7 +18,21 @@ cache:
   - node_modules/
 
 stages:
+  - build
+#  - test
   - production
+
+:build
+  stage:build
+  script:
+  - npm install
+  - npm run-script build
+  
+#:test
+#  stage:test
+#  script:
+#  - npm install
+#  - npm run-script test
   
 production:
   type: deploy
