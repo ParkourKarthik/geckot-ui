@@ -5,6 +5,7 @@ import { HttpClient, HttpHeaders, HttpParams } from '@angular/common/http';
 import { Observable ,  of } from 'rxjs';
 import { catchError, map, tap } from 'rxjs/operators';
 import { MessageService } from './message.service';
+import { environment } from './../../environments/environment';
 
 const httpOptions = {
     headers: new HttpHeaders({ 'Content-Type': 'application/json' })
@@ -14,7 +15,7 @@ const httpOptions = {
 @Injectable()
 export class DashboardService {
     constructor(private http: HttpClient, private messageService: MessageService) { }
-    private _dashboardUrl = 'https://geckot-api.herokuapp.com/dashboards/';
+    private _dashboardUrl = environment.apiUrl + 'dashboards/';
 
     getDashboards(): Observable<Dashboard[]> {
         return this.http.get<Dashboard[]>(this._dashboardUrl)
@@ -25,7 +26,6 @@ export class DashboardService {
     }
 
     addDashboard(dashboard: Dashboard) {
-        //console.log(Name);
         return this.http.post<Dashboard>(this._dashboardUrl, dashboard, httpOptions)
             .pipe(
                 tap((dashboard: Dashboard) => this.log(`added dashboard w/ id=${dashboard._id}`)),
