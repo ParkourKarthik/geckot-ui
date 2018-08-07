@@ -42,6 +42,14 @@ export class DashboardService {
             );
     }
 
+    deleteDashboard(ID: String) {
+        return this.http.delete<Dashboard>(`${this._dashboardUrl}id/${ID}`, httpOptions)
+            .pipe(
+                tap((dashboard: Dashboard) => this.log(`edited dashboard w/ id=${dashboard._id}`)),
+                catchError(this.handleError<Dashboard>('editDashboard'))
+            );
+    }
+
     getSelectedUser(ID: string) {
         return this.http.get<Dashboard>(`${this._dashboardUrl}id/${ID}`)
             .pipe(

@@ -21,6 +21,7 @@ import { MatButtonModule } from '@angular/material/button';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { CustExtBrowserXhr } from './cust-ext-browser-xhr';
 import { MessageService } from './services/message.service';
+import { ConfirmationDialogComponent } from './components/confirmation-dialog/confirmation-dialog.component';
 
 @NgModule({
     bootstrap: [AppComponent],
@@ -45,10 +46,12 @@ import { MessageService } from './services/message.service';
         AppComponent,
         DashboardsComponent,
         DashboardComponent,
-        MessagesComponent
+        MessagesComponent,
+        ConfirmationDialogComponent
     ],
     entryComponents: [
-        DashboardComponent
+        DashboardComponent,
+        ConfirmationDialogComponent
     ],
     providers: [DashboardService, MessageService]
 })
