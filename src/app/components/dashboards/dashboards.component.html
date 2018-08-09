@@ -1,0 +1,17 @@
+<div class="page-container">
+    <h2>Dashboards
+        <button mat-fab (click)="openDialog()" class="add-button">
+    <mat-icon>add</mat-icon>
+</button></h2>
+    <div ng-if="dashboards" class="cards-section">
+        <mat-card *ngFor="let dashboard of dashboards" class="clearfix">
+            <div style="float:left">{{dashboard.Name}}</div>
+            <div style="float:right;">
+                <button type="button" (click)="deleteDashboard(dashboard._id)" mat-icon-button><mat-icon>delete</mat-icon></button>
+            </div>
+            <div style="float:right;">
+                <button type="button" (click)="editDashboard(dashboard._id)" mat-icon-button><mat-icon>edit</mat-icon></button>
+            </div>
+        </mat-card>
+    </div>
+</div>

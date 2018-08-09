@@ -1,0 +1,25 @@
+<!--<button md-button [mdMenuTriggerFor]="menu">Menu</button>-->
+<!--below style is used for menu items-->
+<!--<md-menu #menu="mdMenu">
+    <a md-menu-item routerLink="/pairing" routerLinkActive="active">Pairing</a>
+    <a md-menu-item routerLink="/about" routerLinkActive="active">About</a>
+</md-menu>-->
+
+<mat-sidenav-container class="sidenav-container">
+    <mat-sidenav #sidenav class="sidenav">
+        <ul class="nav sidebar-nav">
+            <li><a routerLink="/dashboards" routerLinkActive="active">Dashboards</a>
+            </li>
+        </ul>
+    </mat-sidenav>
+
+    <mat-toolbar color="primary" class="navbar">
+        <button mat-fab mat-button (click)="sidenav.open()">
+      <mat-icon>toc</mat-icon>
+    </button>
+    </mat-toolbar>
+    <div class="page-container">
+        <router-outlet></router-outlet>
+    </div>
+
+</mat-sidenav-container>
