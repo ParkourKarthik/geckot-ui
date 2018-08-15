@@ -1,4 +1,11 @@
-# Angular5
+**This is a basic project doing simple CRUD operations with Angular6 structure and material design feature with an external nodejs api. It uses Angular-cli.
+(There might be some gitlab-CI and heroku depoyment related code chunks which you could ommit)**
+
+**Though there are no documentation, I hope this could be of much use for beginners.
+Checkout the below url for api:
+https://github.com/ParkourKarthik/geckot-api**
+
+# Angular6
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.6.2.
 
