@@ -4,11 +4,13 @@
 /dist
 /tmp
 /out-tsc
+/geckot-win32-x64
 
 # dependencies
 /node_modules
 
 # IDEs and editors
+/.vscode
 /.idea
 .project
 .classpath
